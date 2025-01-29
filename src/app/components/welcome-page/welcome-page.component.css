@@ -1,0 +1,46 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    z-index: 0; /* Keep background under other elements */
+    background: url('https://conseroglobal.com/wp-content/uploads/2020/12/accounting-meeting.jpg') no-repeat center center/cover;
+  }
+  
+  .hero-content {
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff; /* White color for the main text */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+  }
+  
+  .hero-content h1 .highlight {
+    color: white; /* Bright yellow or a neon color to pop out */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Stronger shadow for the highlighted text */
+  }
+  
+  .hero-content a {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-style: oblique;
+    text-decoration: none;
+    color: #333;
+    background-color: rgba(255, 255, 0, 0.701);
+    display: inline-block;
+  }
+  
+  .hero-content a:hover {
+    opacity: 0.9;
+  }
+
+

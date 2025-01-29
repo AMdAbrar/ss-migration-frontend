@@ -1,0 +1,55 @@
+/* General container styling */
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: flex-start; /* Aligns items to the top of the container */
+    gap: 20px; /* Adds space between items */
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;
+    
+}
+
+/* Styling for each section */
+.content > div {
+    flex: 1; /* Each item will take up an equal amount of space */
+}
+
+/* Restrict the video size */
+.content iframe {
+    width: 100%;
+    height: 320px; /* Set height for the video */
+    border: none;
+    padding-left: 100px;
+}
+
+/* Styling for the descriptions */
+.content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Make sure the videos and content look nice on smaller screens */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px; /* Reduce space between items on smaller screens */
+    }
+
+    .content > div {
+        flex: 1 1 100%; /* Take up full width on smaller screens */
+    }
+
+    /* Adjust iframe sizes on smaller screens */
+    .content iframe {
+        height: 200px; /* Reduce height of iframe for smaller screens */
+    }
+}

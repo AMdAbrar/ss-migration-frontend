@@ -1,0 +1,164 @@
+/* Navbar Styling */
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:#005f8f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* Navbar stays above slide */
+}
+/* Updated Slide Styling for Below Navbar Display */
+.slide {
+    position: static; /* Display slide below navbar */
+    top: unset;       /* Unset any fixed positioning */
+    left: unset;
+    right: unset;
+    bottom: unset;
+    background-color: white; 
+    /* background: url('https://img.freepik.com/free-photo/modern-3d-white-paper-style-background_24972-2009.jpg?t=st=1737370416~exp=1737374016~hmac=d3b17fd88ec0d951fcadc5e85c6a3c0b2be5a1580c913816fb992de410e02571&w=996')no-repeat center center/cover; */
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    width: 100%;
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show Slide when Active */
+.slide.active {
+    display: block; /* Display slide content below navbar */
+    transform: none; /* Remove sliding animation */
+}
+
+.back-button {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.back-button:hover {
+    background-color: #666;
+}
+
+/* Navbar content */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    max-height: 45px;
+    width: 140px;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative; 
+}
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 32px;
+}
+
+/* Main menu styling */
+.nav-links {
+    list-style: none;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    position: absolute;
+    top: 75px; /* Leave space for the exit icon */
+    right: 50px;
+    background-color: rgba(255, 255, 255, 0.866);
+    border-radius: 15px;
+    padding: 50px 0 100px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    z-index: 1000;
+    width: 250px;
+    height: 500px;    
+  }
+
+.nav-links.active {
+    display: block; 
+    height: 200px;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav-links a {
+    color: rgba(0, 0, 0, 0.76);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Login/Logout buttons */
+.loginout {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.loginout li {
+    display: inline;
+}
+.loginout li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.loginout li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.loginout li:last-child {
+    margin-right: 20px;
+}
+/* Exit Button Styling */
+.exit-icon {
+    position: absolute; /* Position it independently */
+    top: -10px; /* Distance from the top of the menu */
+    right: 1px; /* Distance from the right edge */
+    z-index: 1100; /* Ensure it is above other elements */
+  }
+  /* for exit icon  */
+.exit-button {
+    background:none;
+    border: none;
+    color: #333;
+    font-size: 25px; /* Icon size */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  .exit-button:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    color: #555;
+  }
