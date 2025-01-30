@@ -54,14 +54,14 @@ export class LoginPageComponent implements OnInit, OnDestroy{
   }
 
   validateEmail() {
-    // this.emailTouched = true;
-    // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    // this.isEmailValid = emailRegex.test(this.email);
+    this.emailTouched = true;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    this.isEmailValid = emailRegex.test(this.email);
   }
 
   validatePassword() {
-    // this.passwordTouched = true;
-    // this.isPasswordValid = this.password.length > 5;
+    this.passwordTouched = true;
+    this.isPasswordValid = this.password.length > 5;
   }
   loginWithEmail(): void {
     this.validateEmail();

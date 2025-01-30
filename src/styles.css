@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* Default styles for big screens (Laptop/Desktop) */
+@media screen and (min-width: 769px) {
+    body {
+      font-size: 16px;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .menu-icon {
+      display: none; /* Hide menu icon on big screens */
+    }
+}
+  /* Styles for small screens (Mobile) */
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+    .container {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+    /* .nav-links {
+      display: none; 
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    } */
+    .nav-links.active {
+      display: flex; /* Show navigation when active */
+    }
+    .menu-icon {
+      display: block; /* Show menu icon only on small screens */
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+  

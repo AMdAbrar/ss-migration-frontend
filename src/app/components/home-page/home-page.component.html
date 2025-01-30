@@ -33,12 +33,12 @@
                 <div class="nav-links">
                     <a href="#"  (click)="preventLogout()">Home</a>
                     <!-- Internet -->
-                    <div class="nav-item">
+                    <div class="nav-item" *ngIf="isLoggedIn">
                         <!-- <a href="#" [class.disabled]="!isLoggedIn" (click)="isLoggedIn ? null : $event.preventDefault()">Internet/Gdrive/OneDrive</a> -->
                         <div class="nav-item">
                             <a href="#" (click)="preventLogout()">Internet/Gdrive/OneDrive</a>
                         </div>
-                        <div *ngIf="isLoggedIn" class="services-panel">
+                        <div  class="services-panel">
                             <div class="panel-content">
                                 <div class="service-column">
                                     <app-internal-links></app-internal-links>
@@ -47,11 +47,11 @@
                         </div>
                     </div>
                     <!-- Apps -->
-                    <div class="nav-item">
+                    <div class="nav-item" *ngIf="isLoggedIn">
                         <div class="nav-item">
                             <a href="#" (click)="preventLogout()">Apps</a>
                         </div>
-                        <div *ngIf="isLoggedIn" class="services-panel">
+                        <div  class="services-panel">
                             <div class="panel-content">
                                 <div class="service-column">
                                     <app-app-links></app-app-links>
